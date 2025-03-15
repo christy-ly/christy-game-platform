@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import Header from "./components/Header";
 import Home from "./pages/WelcomePage";
 import GamePage from "./pages/GamePage";
 import TicTacToe from "./games/TicTacToe/TicTacToe";
@@ -9,7 +9,7 @@ import TicTacToe from "./games/TicTacToe/TicTacToe";
 function App() {
   return (
     <Router>
-      <NavBar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/games" element={<GamePage />} />

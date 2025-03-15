@@ -40,3 +40,35 @@
     transform: rotate(360deg);
   }
 }
+
+
+.hex-border {
+  margin-top: 0px;
+  width: 170px;
+  height: 140px;
+  background: #ffc800;
+  position: relative;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.hex-border:hover {
+  background-color: #eab308; /* Darker yellow */
+  transform: scale(1.05);
+}
+
+.hex-inner {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 150px;
+  height: 120px;
+  background: white;
+  position: relative;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.hex-inner:before {
+  border-bottom: 60px solid white;
+}
+.hex-inner:after {
+  border-top: 60px solid white;
+}

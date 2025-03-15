@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import HexButton from "../components/HexButton";
 import TicTacToe from "../games/TicTacToe/TicTacToe";
 // import Minesweeper from "./Minesweeper";
 
@@ -7,37 +8,39 @@ const GamePage = () => {
 
   const games = [
     { name: "Tic-Tac-Toe", component: <TicTacToe /> },
-    // { name: "Minesweeper", component: <Minesweeper /> },
+    { name: "Coming Soon...", component: null },
+    { name: "Coming Soon...", component: null },
+    { name: "Coming Soon...", component: null },
+    { name: "Coming Soon...", component: null },
+    { name: "Coming Soon...", component: null },
   ];
 
   return (
-    <div className="flex h-screen">
-      {/* Sidebar */}
-      <div className="w-1/4 bg-gray-800 text-white p-4">
-        <h2 className="text-xl font-bold mb-4">Game List</h2>
-        <ul>
-          {games.map((game, index) => (
-            <li
-              key={index}
-              className={`p-2 cursor-pointer hover:bg-gray-600 rounded ${
-                selectedGame === game.name ? "bg-gray-600" : ""
-              }`}
-              onClick={() => setSelectedGame(game.name)}
-            >
-              {game.name}
-            </li>
+    <div>
+      <div className="p-4 relative">
+        <div className="flex w-max gap-4 ">
+          {[...games].map((game, index) => (
+            <div key={index} className="flex items-center justify-center">
+              <HexButton
+                text={game.name}
+                onClickAction={() => setSelectedGame(game.name)}
+              />
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-4 flex justify-center items-center bg-gray-100">
-        {selectedGame ? (
-          games.find((game) => game.name === selectedGame)?.component
-        ) : (
-          <h2 className="text-2xl font-bold">Select a Game</h2>
-        )}
+      <div className="flex p-2 justify-center items-center border-8 border-double border-primary">
+        <h2 className="text-2xl font-bold">
+          {selectedGame
+            ? games.find((game) => game.name === selectedGame)?.name
+            : "Select A Game"}
+        </h2>
       </div>
+      {selectedGame &&
+        games.find((game) => game.name === selectedGame)?.component &&
+        games.find((game) => game.name === selectedGame)?.component}
     </div>
   );
 };
