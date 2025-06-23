@@ -90,11 +90,11 @@ const TicTacToe = () => {
 
   const renderGameScreen = () => {
     return (
-      <div>
+      <div className="block ">
         {
           <>
             {winner ? (
-              <p className="text-4xl font-bold text-center text-purple-500">
+              <p className="text-4xl font-bold text-center text-secondary">
                 Winner: {winner}
               </p>
             ) : (
@@ -118,7 +118,6 @@ const TicTacToe = () => {
                 </button>
               ))}
 
-              {/* Draw a Hash */}
               <div className="hash-line horizontal-1"></div>
               <div className="hash-line horizontal-2"></div>
               <div className="hash-line vertical-1"></div>
@@ -127,7 +126,7 @@ const TicTacToe = () => {
 
             <div className="flex justify-center items-center">
               <button
-                className="px-6 py-3 bg-yellow-500 text-white text-lg font-bold rounded hover:bg-yellow-700"
+                className="px-6 py-3 bg-secondary text-white text-lg font-bold rounded hover:bg-yellow-700"
                 onClick={resetGame}
               >
                 Restart
@@ -139,11 +138,7 @@ const TicTacToe = () => {
     );
   };
 
-  return (
-    <div className="flex flex-col items-center space-y-4 p-4">
-      {renderGameScreen()}
-    </div>
-  );
+  return <div className="items-center space-y-4 p-4">{renderGameScreen()}</div>;
 };
 
 export default TicTacToe;

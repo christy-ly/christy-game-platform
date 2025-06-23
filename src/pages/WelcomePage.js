@@ -1,4 +1,5 @@
 import buzzThumbnail from "../media/buzz.png";
+
 const WelcomePage = () => {
   return (
     <>

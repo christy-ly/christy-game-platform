@@ -41,6 +41,12 @@
   }
 }
 
+.hex-main-screen {
+  background: #ffc800;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  /* clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); */
+}
+
 
 .hex-border {
   margin-top: 0px;
@@ -49,6 +55,7 @@
   background: #ffc800;
   position: relative;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  /* clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); */
 }
 
 .hex-border:hover {
@@ -64,6 +71,7 @@
   background: white;
   position: relative;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  /* clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); */
 }
 
 .hex-inner:before {

@@ -10,7 +10,7 @@
 
 .cell {
   width: 110px;
-  height: 110px; 
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,6 @@
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
-
 
 .cell:hover {
   background-color: #ddd;
@@ -70,7 +69,7 @@
 }
 
 .winning-line {
-  color: purple;
+  color: #eab308;;
   font-weight: bold;
   font-size: 3rem;
   animation: pulse 1s infinite;

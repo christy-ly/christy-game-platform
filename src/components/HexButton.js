@@ -3,7 +3,7 @@ const HexButton = ({ text, onClickAction }) => {
     <>
       <div className="hex-border">
         <button
-          className="hex-inner text-black px-6 py-6 font-bold uppercase relative rounded"
+          className="hex-inner text-black px-10 py-10 font-bold uppercase relative rounded"
           onClick={onClickAction}
         >
           {text}
